@@ -4,6 +4,10 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+arr.shift(`This`);
+arr.push(`This`);
+return arr
+
 }
 
 
@@ -16,6 +20,8 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+return Math.max.apply (Math, arr)
+
 }
 
 
@@ -28,6 +34,11 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
+    let total = []
+    for (let i of arr){
+    total.push(i)*[arr.length]
+    return total;
+}
 }
 
 
@@ -84,6 +95,7 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 { id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
 
 function findById(id) {
+    
 
 }
 
@@ -111,4 +123,5 @@ let theBand = {
 }
 
 function bandMemberDetails(name) {
+    let bandMemberNames = members.filter(theBand.members)
 }

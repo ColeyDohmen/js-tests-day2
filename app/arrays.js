@@ -73,12 +73,31 @@ let flights = [{
 
 
 function flightCost(destination, firstClass) {
-    //***hint: use the find method***
+
+    
+    //***hint: use the find method*** take in a string, find matching flight object
+    // return matching flight property based firstClass == true, iterate of flights array
+    console.log(`flight log`, destination, firstClass)
+    for (let i=0; i < flights.length; i++){
+        let ticket = flights[i]
+        console.log(`ticket#`+i,ticket)
+        if (destination.toUpperCase() == flights[i].to){
+            console.log(`ticket found`)
+            if(firstClass == true){
+                return flights[i].prices.firstClass
+            } else {
+            return flights[i].prices.standard
+            }
+        }
+    }
 
 }
 
-
-// ------------------------------------------
+// flightCost(`LAX`, false)
+// flightCost(`SEA`, true)
+// flightCost(`CAN`, false)
+// flightCost(`sea`)
+// // ------------------------------------------
 
 
 // 5. Given a number, return the corresponding user object from the staff array that has the given number as the value of their id property. If no user is found, return an object with an error property and value of "No user with that id."

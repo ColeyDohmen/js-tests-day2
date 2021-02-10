@@ -124,4 +124,7 @@ let theBand = {
 
 function bandMemberDetails(name) {
     let bandMemberNames = members.filter(theBand.members)
+
+
+    let string = (' ${theBand.members} is in the band and plays the [band-members-instrument]')
 }
